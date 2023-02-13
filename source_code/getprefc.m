@@ -1,5 +1,6 @@
 function prefValue = getprefc(PrefType, varargin)
 
+% obtain filepath for preference file
 [filepath] = predirc(PrefType);
 
 % if second argument is included return specific keyword

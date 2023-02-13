@@ -8,6 +8,7 @@ if ~isfile(filepath)
     mkdir(fileparts(filepath))
 end
 
+% create file or preference within file
 D = matfile(filepath, 'Writable', true);
 D.(prefName) = prefValue;
 
