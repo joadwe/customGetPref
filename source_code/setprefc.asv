@@ -1,0 +1,14 @@
+function setprefc(PrefType, prefName, prefValue)
+
+username = char(java.lang.System.getProperty('user.name'));
+
+if ismac()
+    prefFile = ['/Users/', username, '/Library/Application Support/',PrefTyperpspass/', PrefType, '_Pref.rpspass'];
+else
+    prefFile = ['C:\Users\', username, '\AppData\Local\',PrefType,'\', PrefType, '_Pref.rpspass'];
+end
+
+D = matfile(prefFile, 'Writable', true);
+D.(prefName) = prefValue;
+
+end
