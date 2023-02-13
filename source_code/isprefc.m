@@ -13,7 +13,7 @@ else
     savedPrefs = fieldnames(D);
 
     % check if specified preference exists in file structure
-    if ismember(savedPrefs, prefName) > 0
+    if ismember(savedPrefs, varargin{1}) > 0
         status = true;
     else
         status = false;
